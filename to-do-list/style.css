@@ -1,0 +1,286 @@
+* 
+{   margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+.notification
+{
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 10px 30px;
+    color: #000;
+    /* background-color:rgba(0,255,0,0.3); */
+    font-size: 20px;
+}
+.succes
+{
+    background: rgba(0,255,0,0.3);
+}
+.danger
+{
+    background-color:rgba(255,0,0,0.3) ;
+}
+.container
+{
+ width: 500px;
+ padding: 20px 0 20px 20px;
+ border-radius: 10px;
+ border: 2px solid #999;
+ box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+
+}
+ .container h2
+{
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.container .addinput
+{
+    width: 100%;
+    padding-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.addinput input
+{
+    width: 88%;
+    height: 50px;
+    padding: 10px;
+    padding-left: 35px;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid #999;
+    border-radius: 5px;
+
+}
+.addinput .fa-pencil
+{
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    font-size: 20px;
+    opacity: 0.5;
+
+}
+
+.addinput button
+{
+ width: 11%;
+ height: 50px;
+ line-height: 51px;
+ font-size: 40px;
+ border-radius: 5px;
+ cursor: pointer;
+ pointer-events: none;
+ color: #fff;
+ background: #1872f2;
+ border: none;
+ outline: none;
+ opacity: 0.5;
+}
+.addinput .add .active
+{
+    opacity:1;
+    pointer-events: auto;
+}
+.addinput .add 
+{
+    opacity:1;
+    pointer-events: auto;
+    font-size: 25px;
+}
+.btn-filter
+{
+    padding-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content:space-between;
+}
+.btns
+{
+    width: 50%;
+    height: 50px;
+    padding: 5px;
+    background: #999;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.btns button
+{
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 16px;
+    background:transparent;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    border: none;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left: 0;
+
+}
+.btns button.active
+{
+    pointer-events: none;
+}
+.btns button.complete
+{
+  left: 50%;
+  pointer-events: auto;
+}
+.showchange
+{
+ position: absolute;
+ top: 0;
+ left: 0%;
+ height: 100%;
+ width: 50%;
+ border-radius: 10px;
+ border: 5px solid #9c9c9c;
+ background: #fff;
+ color: #000;
+ z-index: 1;
+ transition: 0.2s;
+
+}
+.btn-filter .filter
+{
+    width: 40%;
+
+}
+.btn-filter .filter input
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    padding: 0 10px;
+}
+.todocontainer
+{
+ width: 100%;
+}
+.todocontainer .pending,.todocontainer .complete
+{
+ width: 100%;
+ margin-top: 18px;
+}
+.todolist
+{
+  padding: 1px;
+  padding-right: 21px;
+}
+.todolist.overflow
+{
+    overflow-y: auto;
+    max-height: 320px;
+    padding-right: 0px;
+}
+ul li
+{
+ position: relative;
+ width: 100%;
+ list-style: none;
+ padding: 12px;
+ font-size: 1.1rem;
+ margin: 0 0 15px 0;
+ border-radius: 5px;
+ background: #fff;
+ box-shadow: 0.1px 0.1px 2px rgba(0,0,0,0.3);
+letter-spacing: 0.8px;
+cursor: pointer;
+word-wrap: break-word;
+}
+li .action
+{
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+li:hover .action
+{
+  opacity: 1;
+  visibility: visible;
+}
+
+.pending ul li
+{
+    border-bottom:3px solid red;
+}
+.complete ul li
+{
+    border-bottom:3px solid green;
+}
+
+.action button
+{
+    border: none;
+    outline: none;
+    line-height: 18px;
+    cursor: pointer;
+    font-size: 20px;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+}
+.action button:hover
+{
+    background: red;
+}
+.action .com
+{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.pending .footer
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    padding-right: 20px;
+}
+.footer button
+{
+    padding: 10px 12px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1872f2;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0.5;
+    pointer-events: none;
+
+}
